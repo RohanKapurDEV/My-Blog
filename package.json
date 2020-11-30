@@ -1,5 +1,5 @@
 {
-  "name": "my-blog",
+  "name": "my-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^2.9.4",
+    "gsap": "^3.5.1",
     "next": "10.0.3",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.29.0"
   }
 }
