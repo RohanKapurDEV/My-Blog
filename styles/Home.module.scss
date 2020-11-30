@@ -1,0 +1,116 @@
+.titleText {
+  font-size: 2.5rem;
+}
+
+.outerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.outerWrapperLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.linkText {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  overflow: hidden;
+  position: relative;
+  height: 3rem;
+
+  &:hover {
+    color: blue;
+  }
+
+  span {
+    position: absolute;
+    z-index: 200;
+  }
+}
+
+.imgWrapper {
+  width: 402px;
+  height: 302px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 402px;
+    height: 302px;
+    top: 0;
+    right: 0;
+    background-color: black;
+  }
+}
+
+@media (max-width: 1000px) {
+  .titleText {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .linkText {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .titleText {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .linkText {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .titleText {
+    font-size: 2rem;
+    width: 100%;
+    margin-left: 1.5rem;
+    text-align: left;
+  }
+
+  .linkText {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+  .outerWrapperLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+}
