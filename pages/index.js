@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { gsap, Power2, Power3 } from "gsap";
+import { gsap, Power4 } from "gsap";
 // import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
 export default function Home() {
@@ -31,20 +31,14 @@ export default function Home() {
       duration: 0,
       visibility: "visible",
     });
-    tl.from([blogLinkRef.current, projectsLinkRef.current], {
-      duration: 1,
-      y: "100%",
-      ease: Power3.easeOut,
-      stagger: 0.2,
-    });
   }, []);
 
   return (
     <>
       <div ref={appRef} style={appStyle}>
         <div className={styles.outerWrapper}>
-          <div ref={titleRef} className={styles.titleText}>
-            👋 Hi, I'm Rohan. I'm a creative fullstack developer.
+          <div className={styles.titleText}>
+            <span ref={titleRef}>👋 Hi, I'm Rohan. I'm a creative fullstack developer.</span>
           </div>
         </div>
 
@@ -57,19 +51,19 @@ export default function Home() {
         <div style={{ height: "1rem" }}></div>
 
         <div className={styles.outerWrapperLinks}>
-          <div style={{ width: "6rem" }} className={styles.linkText}>
+          <div className={styles.linkText}>
             <span ref={blogLinkRef}>/blog</span>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div style={{ width: "11.1rem" }} className={styles.linkText}>
+          <div className={styles.linkText}>
             <span ref={projectsLinkRef}>/projects</span>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div style={{ width: "12.6rem" }} className={styles.linkText}>
+          <div className={styles.linkText}>
             <span ref={aboutLinkRef}>/about me</span>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div style={{ width: "6.5rem" }} className={styles.linkText}>
+          <div className={styles.linkText}>
             <span ref={linksLinkRef}>/links</span>
           </div>
         </div>
