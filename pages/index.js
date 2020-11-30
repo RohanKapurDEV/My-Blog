@@ -60,7 +60,7 @@ export default function Home() {
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div className={styles.linkText}>
-            <span ref={aboutLinkRef}>/about me</span>
+            <span ref={aboutLinkRef}>/about</span>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div className={styles.linkText}>
