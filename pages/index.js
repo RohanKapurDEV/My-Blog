@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { gsap, Power4 } from "gsap";
+import Skeleton from "react-loading-skeleton";
 // import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
 export default function Home() {
@@ -57,18 +58,24 @@ export default function Home() {
           ></Image>
 
           {showImage ? (
-            <Image src="/images/header.gif" quality={100} alt="Picture of the author" width={402} height={302}></Image>
+            <Image
+              src="/images/header.gif"
+              quality={100}
+              alt="live look at me while everything burns around me"
+              width={402}
+              height={302}
+            ></Image>
           ) : (
             <div
               style={{
-                width: "302px",
-                height: "402px",
+                width: "402px",
+                height: "302px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
-              Loading...
+              <Skeleton height={302} width={402} />
             </div>
           )}
         </div>
