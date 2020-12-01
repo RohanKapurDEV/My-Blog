@@ -4,6 +4,7 @@ import { gsap, Power4 } from "gsap";
 
 export default function Home() {
   const appRef = useRef(null);
+  const linksDivRef = useRef(null);
 
   const titleRef = useRef(null);
   const videoRef = useRef(null);
@@ -43,16 +44,16 @@ export default function Home() {
         duration: 1,
         delay: 0.5,
         opacity: 0,
-        y: -50,
+        y: -30,
         ease: Power4.easeOut,
-        stagger: 0.15,
+        stagger: 0.2,
       }
     );
   }, []);
 
   return (
     <>
-      <div ref={appRef} style={appStyle}>
+      <div ref={appRef} className={styles.appStyle}>
         <div className={styles.outerWrapper}>
           <div ref={titleRef} className={styles.titleText}>
             👋 Hi, I'm Rohan. I'm a creative fullstack developer.
