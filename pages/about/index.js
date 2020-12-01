@@ -32,7 +32,7 @@ export default function About() {
           The things I value the most are learning, building, family, and friends. Not necessarily in that order. If you
           want to work with me, use the{" "}
           <Link href="/links">
-            <a>/links</a>
+            <a style={{ textDecoration: "underline" }}>/links</a>
           </Link>{" "}
           page to find a way to shoot me a message. I'm always looking for new opportunities and people to work with.
         </div>
