@@ -1,0 +1,47 @@
+@import "global_style.scss";
+
+.outerWrapper {
+  margin-top: 2.5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  height: min-content;
+}
+
+.titleText {
+  font-size: $main-font-size;
+}
+
+@media (max-width: 1400px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    height: 100vh;
+  }
+
+  .titleText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: 100vh;
+  }
+
+  .titleText {
+    font-size: 2rem;
+  }
+}

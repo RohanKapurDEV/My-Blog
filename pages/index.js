@@ -1,10 +1,10 @@
 import styles from "../styles/Home.module.scss";
 import { useEffect, useRef } from "react";
 import { gsap, Power4 } from "gsap";
+import Link from "next/link";
 
 export default function Home() {
   const appRef = useRef(null);
-  const linksDivRef = useRef(null);
 
   const titleRef = useRef(null);
   const videoRef = useRef(null);
@@ -23,34 +23,6 @@ export default function Home() {
     height: "90vh",
   };
 
-  const tl = new gsap.timeline();
-
-  useEffect(() => {
-    tl.to(appRef.current, {
-      duration: 0,
-      visibility: "visible",
-    });
-
-    tl.from(
-      [
-        titleRef.current,
-        blogLinkRef.current,
-        projectsLinkRef.current,
-        aboutLinkRef.current,
-        linksLinkRef.current,
-        videoRef.current,
-      ],
-      {
-        duration: 1,
-        delay: 0.5,
-        opacity: 0,
-        y: -30,
-        ease: Power4.easeOut,
-        stagger: 0.2,
-      }
-    );
-  }, []);
-
   return (
     <>
       <div ref={appRef} className={styles.appStyle}>
@@ -67,8 +39,10 @@ export default function Home() {
         </div>
 
         <div className={styles.outerWrapperLinks}>
-          <div ref={blogLinkRef} className={styles.linkText}>
-            /blog
+          <div ref={blogLinkRef}>
+            <Link href="/blog">
+              <a className={styles.linkText}>/blog</a>
+            </Link>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div ref={projectsLinkRef} className={styles.linkText}>

@@ -6,6 +6,11 @@ body {
   color: hsl(0, 0%, 22%);
 }
 
+a {
+  color: hsl(0, 0%, 22%);
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "DM Sans Regular";
   src: url("/fonts/DM-Sans/DMSans-Regular.ttf");
