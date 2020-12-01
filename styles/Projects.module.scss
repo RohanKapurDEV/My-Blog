@@ -1,0 +1,78 @@
+@import "global_style.scss";
+
+.outerWrapper {
+  margin-top: 2.5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.titleText {
+  font-size: $main-font-size;
+}
+
+.spacer {
+  height: 5rem;
+}
+
+.projectItemText {
+  font-family: "DM Sans Medium";
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.subtext {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    height: 100vh;
+  }
+
+  .spacer {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    height: 100vh;
+  }
+
+  .spacer {
+    height: 3rem;
+  }
+
+  .titleText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .outerWrapper {
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: 100vh;
+  }
+
+  .spacer {
+    height: 3rem;
+  }
+
+  .titleText {
+    font-size: 1.9rem;
+  }
+
+  .projectItemText {
+    font-family: "DM Sans Medium";
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+}

@@ -2,13 +2,14 @@
 
 .appStyle {
   // visibility: hidden;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .titleText {
+  text-align: center;
   font-size: $main-font-size;
 }
 
@@ -81,8 +82,7 @@
     margin-top: 2rem;
     font-size: 1.9rem;
     width: 100%;
-    margin-left: 1.5rem;
-    text-align: left;
+    text-align: center;
   }
 
   .linkText {

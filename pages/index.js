@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
-import { useEffect, useRef } from "react";
-import { gsap, Power4 } from "gsap";
+import { useRef } from "react";
 import Link from "next/link";
+import Footer from "../components/footer";
 
 export default function Home() {
   const appRef = useRef(null);
@@ -28,7 +28,7 @@ export default function Home() {
       <div ref={appRef} className={styles.appStyle}>
         <div className={styles.outerWrapper}>
           <div ref={titleRef} className={styles.titleText}>
-            👋 Hi, I'm Rohan. I'm a creative fullstack developer.
+            👋 Hi, I'm Rohan. I design and program fullstack software.
           </div>
         </div>
 
@@ -38,7 +38,8 @@ export default function Home() {
           </video>
         </div>
 
-        <div className={styles.outerWrapperLinks}>
+        <Footer></Footer>
+        {/* <div className={styles.outerWrapperLinks}>
           <div className={styles.linkText} ref={blogLinkRef}>
             <Link href="/blog">
               <a>/blog</a>
@@ -56,9 +57,11 @@ export default function Home() {
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div ref={linksLinkRef} className={styles.linkText}>
-            /links
+            <Link href="/links">
+              <a>/links</a>
+            </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

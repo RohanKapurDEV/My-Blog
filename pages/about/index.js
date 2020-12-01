@@ -15,7 +15,7 @@ export default function About() {
         </div>
         <div className={styles.spacer}></div>
         <div className={styles.titleText}>
-          My personal interests apart from programming include music, gaming, bitcoin, and browsing dribbble (lmao).
+          My personal interests apart from programming include music, bitcoin, investing, and working out.
         </div>
         <div className={styles.spacer}></div>
         <div className={styles.titleText}>
@@ -25,12 +25,7 @@ export default function About() {
         </div>
         <div className={styles.spacer}></div>
         <div className={styles.titleText}>
-          My personal interests apart from programming include music, gaming, bitcoin, and browsing dribbble (lmao).
-        </div>
-        <div className={styles.spacer}></div>
-        <div className={styles.titleText}>
-          The things I value the most are learning, building, family, and friends. Not necessarily in that order. If you
-          want to work with me, use the{" "}
+          The things I value the most are learning, building, family, and friends. If you want to work with me, use the{" "}
           <Link href="/links">
             <a style={{ textDecoration: "underline" }}>/links</a>
           </Link>{" "}

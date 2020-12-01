@@ -16,6 +16,7 @@ export default function Blog() {
         <div className={styles.titleText}>
           Your emails will never be shared with third parties and I promise to never spam 🤞
         </div>
+        <div className={styles.spacer}></div>
       </div>
 
       <Footer></Footer>

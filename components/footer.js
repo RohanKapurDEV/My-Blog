@@ -31,13 +31,21 @@ export default function Footer() {
             <a>blog</a>
           </Link>
         </div>
-        <div style={linkStyle}> projects </div>
+        <div style={linkStyle}>
+          <Link href="/projects">
+            <a>projects</a>
+          </Link>
+        </div>
         <div style={linkStyle}>
           <Link href="/about">
             <a>about</a>
           </Link>
         </div>
-        <div style={linkStyle}> links </div>
+        <div style={linkStyle}>
+          <Link href="/links">
+            <a>links</a>
+          </Link>
+        </div>
       </div>
     </footer>
   );
