@@ -53,8 +53,8 @@ export default function Home() {
             src="/images/header.gif"
             quality={100}
             alt="cache trigger strategy"
-            width={0}
-            height={0}
+            width={402}
+            height={302}
           ></Image>
 
           {showImage ? (
