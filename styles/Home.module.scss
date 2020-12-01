@@ -1,17 +1,19 @@
+.appStyle {
+  visibility: hidden;
+}
+
 .titleText {
   font-size: 2.5rem;
 }
 
-.hideImage {
-  visibility: hidden;
-  position: absolute;
-}
-
 .outerWrapper {
+  margin-top: 1.75rem;
   display: flex;
   justify-content: center;
 }
+
 .outerWrapperLinks {
+  margin-top: 1.75rem;
   display: flex;
   justify-content: center;
 }

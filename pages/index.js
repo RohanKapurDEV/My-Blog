@@ -1,9 +1,6 @@
 import styles from "../styles/Home.module.scss";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap, Power4 } from "gsap";
-import Skeleton from "react-loading-skeleton";
-// import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
 export default function Home() {
   const appRef = useRef(null);
@@ -15,8 +12,6 @@ export default function Home() {
   const projectsLinkRef = useRef(null);
   const aboutLinkRef = useRef(null);
   const linksLinkRef = useRef(null);
-
-  const [showImage, setShowImage] = useState(false);
 
   const appStyle = {
     visibility: "hidden",
@@ -34,18 +29,35 @@ export default function Home() {
       duration: 0,
       visibility: "visible",
     });
+
+    tl.from(
+      [
+        titleRef.current,
+        blogLinkRef.current,
+        projectsLinkRef.current,
+        aboutLinkRef.current,
+        linksLinkRef.current,
+        videoRef.current,
+      ],
+      {
+        duration: 1,
+        delay: 0.5,
+        opacity: 0,
+        y: -50,
+        ease: Power4.easeOut,
+        stagger: 0.15,
+      }
+    );
   }, []);
 
   return (
     <>
       <div ref={appRef} style={appStyle}>
         <div className={styles.outerWrapper}>
-          <div className={styles.titleText}>
-            <span ref={titleRef}>👋 Hi, I'm Rohan. I'm a creative fullstack developer.</span>
+          <div ref={titleRef} className={styles.titleText}>
+            👋 Hi, I'm Rohan. I'm a creative fullstack developer.
           </div>
         </div>
-
-        <div style={{ height: "2.5rem" }}></div>
 
         <div ref={videoRef} className={styles.outerWrapper}>
           <video width={300} height={300} autoPlay muted loop>
@@ -53,23 +65,21 @@ export default function Home() {
           </video>
         </div>
 
-        <div style={{ height: "2.5rem" }}></div>
-
         <div className={styles.outerWrapperLinks}>
-          <div className={styles.linkText}>
-            <span ref={blogLinkRef}>/blog</span>
+          <div ref={blogLinkRef} className={styles.linkText}>
+            /blog
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div className={styles.linkText}>
-            <span ref={projectsLinkRef}>/projects</span>
+          <div ref={projectsLinkRef} className={styles.linkText}>
+            /projects
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div className={styles.linkText}>
-            <span ref={aboutLinkRef}>/about</span>
+          <div ref={aboutLinkRef} className={styles.linkText}>
+            /about
           </div>
           <div style={{ marginRight: "3rem" }}></div>
-          <div className={styles.linkText}>
-            <span ref={linksLinkRef}>/links</span>
+          <div ref={linksLinkRef} className={styles.linkText}>
+            /links
           </div>
         </div>
       </div>
