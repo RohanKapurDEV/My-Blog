@@ -39,9 +39,9 @@ export default function Home() {
         </div>
 
         <div className={styles.outerWrapperLinks}>
-          <div ref={blogLinkRef}>
+          <div className={styles.linkText} ref={blogLinkRef}>
             <Link href="/blog">
-              <a className={styles.linkText}>/blog</a>
+              <a>/blog</a>
             </Link>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
@@ -50,7 +50,9 @@ export default function Home() {
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div ref={aboutLinkRef} className={styles.linkText}>
-            /about
+            <Link href="/about">
+              <a>/about</a>
+            </Link>
           </div>
           <div style={{ marginRight: "3rem" }}></div>
           <div ref={linksLinkRef} className={styles.linkText}>

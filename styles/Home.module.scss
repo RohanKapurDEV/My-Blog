@@ -27,11 +27,6 @@
 .linkText {
   font-size: $main-font-size;
   cursor: pointer;
-  transition: 0.3s ease-out;
-
-  &:hover {
-    color: blue;
-  }
 }
 
 .imgWrapper {
@@ -66,11 +61,6 @@
   .linkText {
     font-size: 2rem;
     cursor: pointer;
-    transition: 0.3s ease-out;
-
-    &:hover {
-      color: blue;
-    }
   }
 }
 
@@ -83,33 +73,23 @@
   .linkText {
     font-size: 1.5rem;
     cursor: pointer;
-    transition: 0.3s ease-out;
-
-    &:hover {
-      color: blue;
-    }
   }
 }
 
 @media (max-width: 510px) {
   .titleText {
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.9rem;
     width: 100%;
     margin-left: 1.5rem;
     text-align: left;
   }
 
   .linkText {
-    font-size: 2rem;
+    font-size: 1.9rem;
     cursor: pointer;
-    transition: 0.3s ease-out;
     margin-left: 1.5rem;
     margin-bottom: 0.5rem;
-
-    &:hover {
-      color: blue;
-    }
   }
 
   .outerWrapperLinks {

@@ -9,6 +9,11 @@ body {
 a {
   color: hsl(0, 0%, 22%);
   text-decoration: none;
+
+  &:hover {
+    color: blue;
+    transition: 0.3s ease-out;
+  }
 }
 
 @font-face {
