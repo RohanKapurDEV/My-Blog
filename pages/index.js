@@ -48,14 +48,17 @@ export default function Home() {
         <div style={{ height: "1rem" }}></div>
 
         <div ref={imageRef} className={styles.outerWrapper}>
-          <Image
-            onLoad={() => setShowImage(true)}
-            src="/images/header.gif"
-            quality={100}
-            alt="cache trigger strategy"
-            width={402}
-            height={302}
-          ></Image>
+          <div className={styles.hideImage}>
+            <Image
+              onLoad={() => setShowImage(true)}
+              className={styles.hideImage}
+              src="/images/header.gif"
+              quality={100}
+              alt="cache trigger strategy"
+              width={402}
+              height={302}
+            ></Image>
+          </div>
 
           {showImage ? (
             <Image
