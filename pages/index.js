@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap, Power4 } from "gsap";
 // import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
@@ -14,6 +14,8 @@ export default function Home() {
   const projectsLinkRef = useRef(null);
   const aboutLinkRef = useRef(null);
   const linksLinkRef = useRef(null);
+
+  const [showImage, setShowImage] = useState(false);
 
   const appStyle = {
     visibility: "hidden",
@@ -45,7 +47,30 @@ export default function Home() {
         <div style={{ height: "1rem" }}></div>
 
         <div ref={imageRef} className={styles.outerWrapper}>
-          <Image src="/images/header.gif" quality={100} alt="Picture of the author" width={402} height={302}></Image>
+          <Image
+            onLoad={() => setShowImage(true)}
+            src="/images/header.gif"
+            quality={100}
+            alt="cache trigger strategy"
+            width={0}
+            height={0}
+          ></Image>
+
+          {showImage ? (
+            <Image src="/images/header.gif" quality={100} alt="Picture of the author" width={402} height={302}></Image>
+          ) : (
+            <div
+              style={{
+                width: "302px",
+                height: "402px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Loading...
+            </div>
+          )}
         </div>
 
         <div style={{ height: "1rem" }}></div>
