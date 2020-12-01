@@ -9,7 +9,7 @@ export default function Home() {
   const appRef = useRef(null);
 
   const titleRef = useRef(null);
-  const imageRef = useRef(null);
+  const videoRef = useRef(null);
 
   const blogLinkRef = useRef(null);
   const projectsLinkRef = useRef(null);
@@ -45,45 +45,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{ height: "1rem" }}></div>
+        <div style={{ height: "2.5rem" }}></div>
 
-        <div ref={imageRef} className={styles.outerWrapper}>
-          <div className={styles.hideImage}>
-            <Image
-              onLoad={() => setShowImage(true)}
-              className={styles.hideImage}
-              src="/images/header.gif"
-              quality={100}
-              alt="cache trigger strategy"
-              width={402}
-              height={302}
-            ></Image>
-          </div>
-
-          {showImage ? (
-            <Image
-              src="/images/header.gif"
-              quality={100}
-              alt="live look at me while everything burns around me"
-              width={402}
-              height={302}
-            ></Image>
-          ) : (
-            <div
-              style={{
-                width: "402px",
-                height: "302px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Skeleton height={302} width={402} />
-            </div>
-          )}
+        <div ref={videoRef} className={styles.outerWrapper}>
+          <video width={300} height={300} autoPlay muted loop>
+            <source src="/videos/4amvibes.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        <div style={{ height: "1rem" }}></div>
+        <div style={{ height: "2.5rem" }}></div>
 
         <div className={styles.outerWrapperLinks}>
           <div className={styles.linkText}>
