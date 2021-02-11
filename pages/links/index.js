@@ -15,7 +15,7 @@ export default function Links() {
           <a
             className={styles.titleText}
             style={{ textDecoration: "underline" }}
-            href="https://www.twitter.com/RohanXKapur"
+            href="https://www.twitter.com/0xrohan"
           >
             Twitter
           </a>
